@@ -241,7 +241,7 @@
       'Mensaje:',
       data.get('mensaje') || ''
     ].join('\n');
-    var whatsappUrl = 'https://wa.me/9515779935?text=' + encodeURIComponent(message);
+    var whatsappUrl = 'https://wa.me/529515779935?text=' + encodeURIComponent(message);
 
     status.classList.add('is-success');
     var opened = window.open(whatsappUrl, '_blank', 'noopener');
