@@ -1629,3 +1629,21 @@ main { counter-reset: section; }
   .hv-card { transform: none; }
   .wa-float::before { display: none; }
 }
+
+/* ---------- Trabajo (versión limpia) ---------- */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.work-grid .g-item { aspect-ratio: 4 / 5; }
+.work-grid .g-item img { height: 100%; }
+@media (min-width: 900px) {
+  .work-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .work-grid .g-item { aspect-ratio: 4 / 3; }
+  .work-grid .g-item figcaption { left: 18px; bottom: 18px; }
+}
+@media (max-width: 559px) {
+  .work-grid .g-item figcaption { left: 10px; bottom: 10px; font-size: .64rem; }
+}
+.work-grid .media-focus-top img { object-position: center top; }
